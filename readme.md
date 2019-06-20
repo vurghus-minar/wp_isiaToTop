@@ -1,14 +1,38 @@
-# isiaToTop Wordpress Plugin
+# isiaToTop 
 
-### About
+A versatile and mobile friendly 'scroll to top' plugin based on isiaToTop.
 
-isiatotop plugin is a versatile 'scroll to top' plugin based on the isiaToTop js plugin available at:
+
+## Description 
+
+isiaToTop plugin is based on the isiaToTop js plugin available at:
 [https://github.com/vurghus-minar/isiaToTop](https://github.com/vurghus-minar/isiaToTop)
+
+You can check out the Codepen demo here:
+[https://codepen.io/vurghusm/pen/NZqGxb](https://codepen.io/vurghusm/pen/NZqGxb)
 
 It is mobile friendly and fully customizable.
 
-### Installation
+Contribution, feedback, issue reporting, and comments are welcomed via the github.
 
-- Download isiatotop plugin, unzip and upload `isiatotop` folder to the `/wp-content/plugins/` directory
-- Activate the plugin through the 'Plugins' menu in WordPress
-- To override the `js` and `css` files, create a `config-isiaToTop` folder in your theme or child theme and copy the `css` and `js` folders located in the `isiatotop/public` directory.
+
+## Installation 
+
+1. Install and activate via Plugin manager.
+   Alternatively, download, unzip and upload `isiatotop` folder to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+
+
+## Overriding defaults css and js 
+
+1. To override the `css` and `js` files, create a `config-isiatotop` folder in your theme or child theme.
+2. Copy the `css` and `js` folders located in the `isiatotop/assets/public` directory to the `config-isiatotop` and override files there.
+   
+   The directory structure should look like this.
+   --themes
+   ---->your_theme or child_theme
+   ------>config-isiatotop
+   -------->css
+   ---------->custom.css
+   -------->js
+   ---------->init.js
