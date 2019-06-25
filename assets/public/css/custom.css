@@ -1,0 +1,12 @@
+#isiaToTop {
+	width: auto;
+	height: auto;
+	max-width: 50px;
+	max-height: 50px;
+	padding: 0px;
+}
+
+#isiaToTop img{
+	display: block;
+	margin: 12px;
+}
