@@ -1,7 +1,7 @@
 === isiaToTop ===
 Contributors: vurghusm
 Tags: scroll, top, javascript
-Requires at least: 3.7.0
+Requires at least: 4.0.0
 Tested up to: 5.2.2
 Stable tag: 4.9
 Requires PHP: 5.6
