@@ -12,9 +12,9 @@ class IsiatotopTest extends WP_UnitTestCase {
 		* Plugin configuration array
 		*/
 		$base_config          = [
-			'plugin_dir' => plugin_dir_path( get_home_path() . 'wp-content/plugins/isiatotop/isiatotop.php' ), // Get current plugin directory.
+			'plugin_dir' => plugin_dir_path( get_home_path() . 'wp-content/plugins/wp_isiaToTop/isiatotop.php' ), // Get current plugin directory.
 			'slug'       => 'isiatotop', // Plugin slug for text domain, settings, prefixes etc.
-			'url'        => untrailingslashit( plugins_url( '/', get_home_path() . 'wp-content/plugins/isiatotop/isiatotop.php' ) ), // Plugin url.
+			'url'        => untrailingslashit( plugins_url( '/', get_home_path() . 'wp-content/plugins/wp_isiaToTop/isiatotop.php' ) ), // Plugin url.
 			'version'    => '1.0.0', // Plugin version.
 		];
 		$this->class_instance = new \AM\Isiatotop\Plugin( $base_config );
@@ -42,7 +42,7 @@ class IsiatotopTest extends WP_UnitTestCase {
 
 	public function test_config_array() {
 		$this->assertInternalType( 'object', $this->class_instance->config );
-		$this->assertEquals( 'http://example.org/wp-content/plugins/isiatotop/assets/public/css/', $this->class_instance->config->frontend_url->style );
+		$this->assertEquals( 'http://example.org/wp-content/plugins/wp_isiaToTop/assets/public/css/', $this->class_instance->config->frontend_url->style );
 	}
 
 	public function test_assets_override_directory_exists() {

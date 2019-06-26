@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Plugin Name: isiatotop
+ * Plugin Name: isiaToTop
  * Plugin URI:  https://github.com/vurghus-minar/wp_isiaToTop
  * Description: A versatile and mobile friendly 'scroll to top' plugin based on isiaToTop.
  * Version:     1.0.0
@@ -129,7 +129,7 @@ class Plugin {
 		return (object) [
 			'language_dir' => $this->plugin_dir . '/languages',
 			'text_domain'  => $this->slug,
-			'core_dir'     => (object) [
+			'core_url'     => (object) [
 				'style'  => $this->url . '/assets/css/',
 				'script' => $this->url . '/assets/js/',
 			],
@@ -165,8 +165,8 @@ class Plugin {
 	public function load_public_styles() {
 
 		$custom_style_dir = $this->assets_override_directory_exists() ? $this->config->frontend_url->style_override : $this->config->frontend_url->style;
-		wp_enqueue_style( $this->slug, $this->config->core_dir->style . 'isiaToTop.min.css', array(), $this->version, 'all' );
-		wp_enqueue_style( $this->slug . '-custom', $custom_style_dir . 'custom.css', array( $this->slug . '_css' ), $this->version, 'all' );
+		wp_enqueue_style( $this->slug, $this->config->core_url->style . 'isiaToTop.min.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->slug . '-custom', $custom_style_dir . 'custom.css', array( $this->slug ), $this->version, 'all' );
 
 	}
 
@@ -179,8 +179,8 @@ class Plugin {
 	public function load_public_scripts() {
 
 		$custom_script_dir = $this->assets_override_directory_exists() ? $this->config->frontend_url->script_override : $this->config->frontend_url->script;
-		wp_enqueue_script( $this->slug, $this->config->core_dir->script . 'isiaToTop.min.js', array(), $this->version, true );
-		wp_enqueue_script( $this->slug . '-init', $custom_script_dir . 'init.js', array( $this->slug . '_js' ), $this->version, true );
+		wp_enqueue_script( $this->slug, $this->config->core_url->script . 'isiaToTop.min.js', array(), $this->version, true );
+		wp_enqueue_script( $this->slug . '-init', $custom_script_dir . 'init.js', array( $this->slug ), $this->version, true );
 
 	}
 
