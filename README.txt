@@ -1,9 +1,10 @@
 === isiaToTop ===
-Contributors: Vurghus Minar
+Contributors: vurghusm
 Tags: scroll, top, javascript
-Requires at least: 3.0.1
+Requires at least: 3.7.0
 Tested up to: 5.2.2
 Stable tag: 4.9
+Requires PHP: 5.6
 License: GPL v3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -40,3 +41,7 @@ Contribution, feedback, issue reporting, and comments are welcomed via the githu
    ---------->custom.css
    -------->js
    ---------->init.js
+
+ == Screenshots == 
+
+This is an example preview of the default back to top link.
