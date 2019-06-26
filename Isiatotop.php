@@ -111,7 +111,6 @@ class Plugin {
 		$this->plugin_dir   = $config_array['plugin_dir'];
 		$this->override_url = get_stylesheet_directory_uri() . "/config-$this->slug/";
 		$this->config       = $this->get_config();
-
 		$this->load_textdomain();
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_public_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_public_scripts' ) );
@@ -166,8 +165,8 @@ class Plugin {
 	public function load_public_styles() {
 
 		$custom_style_dir = $this->assets_override_directory_exists() ? $this->config->frontend_url->style_override : $this->config->frontend_url->style;
-		wp_enqueue_style( $this->slug . '_css', $this->config->core_dir->style . 'isiaToTop.min.css', array(), $this->version, 'all' );
-		wp_enqueue_style( $this->slug . '_custom_css', $custom_style_dir . 'custom.css', array( $this->slug . '_css' ), $this->version, 'all' );
+		wp_enqueue_style( $this->slug, $this->config->core_dir->style . 'isiaToTop.min.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->slug . '-custom', $custom_style_dir . 'custom.css', array( $this->slug . '_css' ), $this->version, 'all' );
 
 	}
 
@@ -180,8 +179,8 @@ class Plugin {
 	public function load_public_scripts() {
 
 		$custom_script_dir = $this->assets_override_directory_exists() ? $this->config->frontend_url->script_override : $this->config->frontend_url->script;
-		wp_enqueue_script( $this->slug . '_js', $this->config->core_dir->script . 'isiaToTop.min.js', array(), $this->version, true );
-		wp_enqueue_script( $this->slug . '_init_js', $custom_script_dir . 'init.js', array( $this->slug . '_js' ), $this->version, true );
+		wp_enqueue_script( $this->slug, $this->config->core_dir->script . 'isiaToTop.min.js', array(), $this->version, true );
+		wp_enqueue_script( $this->slug . '-init', $custom_script_dir . 'init.js', array( $this->slug . '_js' ), $this->version, true );
 
 	}
 
