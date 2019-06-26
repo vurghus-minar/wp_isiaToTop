@@ -1,5 +1,7 @@
 # isiaToTop 
 
+[![Build Status](https://travis-ci.org/vurghus-minar/wp_isiaToTop.svg?branch=master)](https://travis-ci.org/vurghus-minar/wp_isiaToTop)
+
 A versatile and mobile friendly 'scroll to top' plugin based on isiaToTop.
 
 
